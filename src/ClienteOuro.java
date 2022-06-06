@@ -24,4 +24,9 @@ public class ClienteOuro extends Cliente{
         return (float) ( beneficio * 1.1);
     }
 
+    @Override
+    public String toString() {
+        return super.getNome();
+    }
+
 }

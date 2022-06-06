@@ -25,7 +25,7 @@ public class Negocio {
     public float totalBeneficios() {
         float beneficio = 0;
         for(int i = 0; i < quantidadeClientes; i++) {
-            beneficio += clientes[i].getMensalidade();
+            beneficio += clientes[i].getBeneficio();
         }
         return beneficio;
     }

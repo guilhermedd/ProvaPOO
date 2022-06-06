@@ -27,4 +27,8 @@ public class Cliente {
     public void setBeneficio(float valor) {
         this.beneficio = valor;
     }
+
+    public String toString() {
+        return this.nome;
+    }
 }

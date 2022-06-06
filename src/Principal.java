@@ -5,34 +5,46 @@ public class Principal {
     public static Scanner scan = new Scanner(System.in);
     public static void cadastrarCliente() {
         Cliente cliente = new Cliente();
-        System.out.println("Qual é o nome do cliente");
         cliente.setNome(scan.nextLine());
-        System.out.println("Quanto é a mensalidade do cliente");
+        System.out.println("Qual eh o nome do cliente?");
+        cliente.setNome(scan.nextLine());
+        System.out.println("Quanto eh a mensalidade do cliente?");
         cliente.setMensalidade(scan.nextFloat());
-        System.out.println("Qual é o beneficio do cliente");
+        scan.nextLine();
+        System.out.println("Qual eh o beneficio do cliente?");
         cliente.setBeneficio(scan.nextFloat());
+        scan.nextLine();
 
         negocio.adicionarCliente(cliente);
     }
     public static void cadastrarClienteOuro() {
         ClienteOuro cliente = new ClienteOuro();
-        System.out.println("Qual é o nome do cliente");
+        scan.nextLine();
+        System.out.println("Qual eh o nome do cliente?");
         cliente.setNome(scan.nextLine());
-        System.out.println("Quanto é a mensalidade do cliente");
+        System.out.println("Quanto eh a mensalidade do cliente?");
         cliente.setMensalidade(scan.nextFloat());
-        System.out.println("Qual é o beneficio do cliente");
+        scan.nextLine();
+        System.out.println("Qual eh o beneficio do cliente?");
         cliente.setBeneficio(scan.nextFloat());
+        scan.nextLine();
 
         negocio.adicionarClienteOuro(cliente);
     }
     public static void totalMensalidades() {
-        System.out.println("O total de mensalidades é: " + negocio.totalMensalidades());
+        System.out.println("O total de mensalidades eh: " + negocio.totalMensalidades());
     }
     public static void totalBeneficios() {
-        System.out.println("O total de beneficios é: " + negocio.totalBeneficios());
+        System.out.println("O total de beneficios eh: " + negocio.totalBeneficios());
     }
     public static void listaNomeClientesOuro() {
-        System.out.println("Lista de nomes de clientes de ouro: " + negocio.listaNomeClientesOuro());
+        String nomes = "\n";
+        for(String nome: negocio.listaNomeClientesOuro()) {
+            nomes += '-';
+            nomes += nome;
+            nomes += "\n";
+        }
+        System.out.println("Lista de nomes de clientes de ouro: " + nomes);
     }
     public static void main(String[] args) {
         int escolha = -1;
