@@ -11,6 +11,7 @@ public class Negocio {
     public void adicionarClienteOuro(ClienteOuro cliente) {
         this.clientes[getQuantidadeClientesOuro] = cliente;
         this.getQuantidadeClientesOuro++;
+        this.quantidadeClientes++;
     }
 
     public float totalMensalidades() {
