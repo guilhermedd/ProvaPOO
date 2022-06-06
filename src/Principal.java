@@ -27,6 +27,8 @@ public class Principal {
         scan.nextLine();
         System.out.println("Qual eh o beneficio do cliente?");
         cliente.setBeneficio(scan.nextFloat());
+        System.out.println("Qual eh a quantidade de dependentes do cliente?");
+        cliente.setQuantDependentes(scan.nextInt());
         scan.nextLine();
 
         negocio.adicionarClienteOuro(cliente);

@@ -31,7 +31,7 @@ public class Negocio {
     }
 
     public String[] listaNomeClientesOuro() {
-        String[] nomes = new String[quantidadeClientes];
+        String[] nomes = new String[getQuantidadeClientesOuro];
         for(int i = 0; i < quantidadeClientes; i++) {
             if (clientes[i] instanceof  ClienteOuro) {
                 nomes[i] = clientes[i].getNome();
